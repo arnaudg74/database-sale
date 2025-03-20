@@ -21,9 +21,11 @@ If the goal is just to answer the basic questions, here are the answers:
 But, if you want a big answer to create database (your level in database to depend) :
 
 ```sql
+-- Create the database
 CREATE DATABASE salesDB;
 USE salesDB;
--- To create a customers table with differents components
+
+-- Create the Customers table
 CREATE TABLE Customers (
     CustomerID INT PRIMARY KEY AUTO_INCREMENT,
     Name VARCHAR(100) NOT NULL,
@@ -32,6 +34,7 @@ CREATE TABLE Customers (
     Address TEXT
 );
 
+-- Create the Products table
 CREATE TABLE Products (
     ProductID INT PRIMARY KEY AUTO_INCREMENT,
     Name VARCHAR(100) NOT NULL,
@@ -40,6 +43,7 @@ CREATE TABLE Products (
     StockQuantity INT NOT NULL
 );
 
+-- Create the Orders table
 CREATE TABLE Orders (
     OrderID INT PRIMARY KEY AUTO_INCREMENT,
     CustomerID INT,
@@ -48,6 +52,7 @@ CREATE TABLE Orders (
     FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID) ON DELETE CASCADE
 );
 
+-- Create the OrderDetails table
 CREATE TABLE OrderDetails (
     OrderDetailID INT PRIMARY KEY AUTO_INCREMENT,
     OrderID INT,
@@ -58,19 +63,9 @@ CREATE TABLE OrderDetails (
     FOREIGN KEY (ProductID) REFERENCES Products(ProductID) ON DELETE CASCADE
 );
 
-CREATE TABLE Payments (
-    PaymentID INT PRIMARY KEY AUTO_INCREMENT,
-    OrderID INT,
-    PaymentDate DATETIME DEFAULT CURRENT_TIMESTAMP,
-    Amount DECIMAL(10,2) NOT NULL,
-    PaymentMethod ENUM('Credit Card', 'PayPal', 'Bank Transfer', 'Cash') NOT NULL,
-    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID) ON DELETE CASCADE
-);
 ```
 
 To see diagram model database paste this in PlantUML or look a photo : https://www.plantuml.com/plantuml/ 
-
-![Diagramme de la base de données](image.png)
 
 ```planUML
 @startuml
@@ -114,3 +109,5 @@ Orders ||--o{ OrderDetails
 Products ||--o{ OrderDetails
 @enduml
 ```
+
+![Diagramme de la base de données](image.png)
