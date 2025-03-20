@@ -3,7 +3,9 @@
 ## Objective
 If the goal is just to answer the basic questions, here are the answers:
 
-1. Create a new database called `salesDB`:
+**Create file `answers.sql` and push in your code** 
+
+1. Create a new database `salesDB`:
    
    ```sql
    CREATE DATABASE salesDB;
@@ -11,9 +13,9 @@ If the goal is just to answer the basic questions, here are the answers:
 
 2. Delete database `demo` :
 
-  ```sql
-  DROP DATABASE demo;
-  ```
+   ```sql
+   DROP DATABASE demo;
+   ```
 
 ## For more
 But, if you want a big answer to create database (your level in database to depend) :
