@@ -1,3 +1,4 @@
+
 # Database Exercise - salesDB
 
 ## Objective
@@ -12,7 +13,6 @@ If the goal is just to answer the basic questions, here are the answers:
    ```
 
 2. Delete database `demo` :
-
    ```sql
    DROP DATABASE demo;
    ```
