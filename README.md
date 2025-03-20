@@ -3,7 +3,7 @@
 ## Objective
 If the goal is just to answer the basic questions, here are the answers:
 
-**Create file `answers.sql` and push in your code** 
+**Create file `answers.sql` in your repo and push in your code** 
 
 1. Create a new database `salesDB`:
    
@@ -19,6 +19,8 @@ If the goal is just to answer the basic questions, here are the answers:
 
 ## For more
 But, if you want a big answer to create database (your level in database to depend) :
+
+**Create file `answers.sql` in your repo and push in your code** 
 
 ```sql
 -- Create the database
