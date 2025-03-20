@@ -70,6 +70,8 @@ CREATE TABLE Payments (
 
 To see diagram model database paste this in PlantUML or look a photo : https://www.plantuml.com/plantuml/ 
 
+![Diagramme de la base de données](image.png)
+
 ```planUML
 @startuml
 entity Customers {
